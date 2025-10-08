@@ -54,7 +54,7 @@ class _SpinWheelState extends State<SpinWheel>
       await prefs.setInt('spinCount', 0);
       await prefs.setInt('lastSpinTime', currentTime);
       return true;
-    } else if (spinCount < 3) {
+    } else if (spinCount < 26) {
       return true;
     } else {
       return false;
@@ -173,7 +173,7 @@ class _SpinWheelState extends State<SpinWheel>
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 40),
 
                     // Two texts above the wheel
                     Column(
@@ -181,16 +181,16 @@ class _SpinWheelState extends State<SpinWheel>
                         Text(
                           "Welcome to Lucky Spin!",
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Colors.black87,
                           ),
                         ),
-                        SizedBox(height: 8),
+                        SizedBox(height: 15),
                         Text(
                           "Try your luck and win exciting prizes",
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 18,
                             color: Colors.black54,
                           ),
                           textAlign: TextAlign.center,
@@ -198,7 +198,7 @@ class _SpinWheelState extends State<SpinWheel>
                       ],
                     ),
 
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 50),
 
                     // Spin Wheel
                     Stack(
@@ -251,7 +251,7 @@ class _SpinWheelState extends State<SpinWheel>
                       ],
                     ),
 
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 60),
 
                     ElevatedButton(
                       onPressed: spinWheel,
