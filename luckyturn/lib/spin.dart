@@ -54,7 +54,7 @@ class _SpinWheelState extends State<SpinWheel>
       await prefs.setInt('spinCount', 0);
       await prefs.setInt('lastSpinTime', currentTime);
       return true;
-    } else if (spinCount < 26) {
+    } else if (spinCount < 3) {
       return true;
     } else {
       return false;
